@@ -110,7 +110,7 @@ do
   vim.o.number = true
   -- You can also add relative line numbers, to help with jumping.
   --  Experiment for yourself to see if you like it!
-  -- vim.o.relativenumber = true
+  vim.o.relativenumber = true
 
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.o.mouse = 'a'
@@ -488,6 +488,10 @@ do
 
   -- NOTE: You can install multiple plugins at once
   vim.pack.add(telescope_plugins)
+  -- Add harpoon
+  vim.pack.add {
+  gh 'ThePrimeagen/harpoon',
+}
 
   -- See `:help telescope` and `:help telescope.setup()`
   require('telescope').setup {
@@ -694,7 +698,7 @@ do
   local servers = {
     -- clangd = {},
     -- gopls = {},
-    -- pyright = {},
+    basedpyright = {},
     -- rust_analyzer = {},
     --
     -- Some languages (like typescript) have entire language plugins that can be useful:
