@@ -251,6 +251,11 @@ do
     group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
     callback = function() vim.hl.on_yank() end,
   })
+  -- Custom
+  -- Easy way to go to explorer
+  vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, { desc = "go to [ex]plorer" })
+  -- Paste without copying into register
+  vim.keymap.set("x", "<leader>p", "\"_dP")
 end
 
 -- ============================================================
